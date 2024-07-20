@@ -1,18 +1,13 @@
-package models;
+package dtos;
 
-public class Vehicle extends BaseModel{
+import models.VehicleType;
 
-    private String ownerName;
+public class IssueTicketRequestDto {
+
     private String vehicleNumber;
     private VehicleType vehicleType;
-
-    public String getOwnerName() {
-        return ownerName;
-    }
-
-    public void setOwnerName(String ownerName) {
-        this.ownerName = ownerName;
-    }
+    private String ownerName;
+    private long gateId;
 
     public String getVehicleNumber() {
         return vehicleNumber;
@@ -28,5 +23,21 @@ public class Vehicle extends BaseModel{
 
     public void setVehicleType(VehicleType vehicleType) {
         this.vehicleType = vehicleType;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
+
+    public long getGateId() {
+        return gateId;
+    }
+
+    public void setGateId(long gateId) {
+        this.gateId = gateId;
     }
 }
